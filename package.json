@@ -10,9 +10,12 @@
   },
   "dependencies": {
     "@stitches/react": "^1.2.8",
-    "next": "14.0.4",
+    "axios": "^1.6.2",
+    "keen-slider": "^6.8.6",
+    "next": "12.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "stripe": "^14.8.0"
   },
   "devDependencies": {
     "@types/node": "^20",
