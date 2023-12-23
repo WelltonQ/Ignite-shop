@@ -2,14 +2,14 @@ import Image from "next/future/image"
 import Head from 'next/head'
 import { GetStaticProps } from "next"
 import Link from "next/link"
-
+import Stripe from "stripe"
 import { useKeenSlider } from 'keen-slider/react'
 
 import { stripe } from "../lib/stripe"
 import { HomeContainer, Product } from "../styles/pages/home"
+import bagImg from "../assets/bag.svg"
 
 import 'keen-slider/keen-slider.min.css'
-import Stripe from "stripe"
 
 interface HomeProps {
   products: {
@@ -42,8 +42,11 @@ export default function Home({ products }: HomeProps) {
                 <Image src={product.imageUrl} width={520} height={480} alt="" />
 
                 <footer>
-                  <strong>{product.name}</strong>
-                  <span>{product.price}</span>
+                  <div>
+                    <strong>{product.name}</strong>
+                    <span>{product.price}</span>
+                  </div>
+                  <Image src={bagImg} alt="Sacola de compras" />
                 </footer>
               </Product>
             </Link>
@@ -78,6 +81,6 @@ export const getStaticProps: GetStaticProps = async () => {
     props: {
       products
     },
-    revalidate: 60 * 60 * 2 // 2 hours,
+    revalidate: 60 * 60 * 2
   }
 }

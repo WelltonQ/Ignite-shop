@@ -1,9 +1,10 @@
+import { useState } from "react";
 import axios from "axios";
 import { GetStaticPaths, GetStaticProps } from "next"
 import Image from "next/future/image";
 import Head from "next/head";
-import { useState } from "react";
 import Stripe from "stripe";
+
 import { stripe } from "../../lib/stripe";
 import { ImageContainer, ProductContainer, ProductDetails } from "../../styles/pages/product"
 
@@ -57,7 +58,7 @@ export default function Product({ product }: ProductProps) {
           <p>{product.description}</p>
 
           <button disabled={isCreatingCheckoutSession} onClick={handleBuyButton}>
-            Comprar agora
+              Colocar na sacola
           </button>
         </ProductDetails>
       </ProductContainer>
@@ -97,6 +98,6 @@ export const getStaticProps: GetStaticProps<any, { id: string }> = async ({ para
         defaultPriceId: price.id
       }
     },
-    revalidate: 60 * 60 * 1 // 1 hours
+    revalidate: 60 * 60 * 1
   }
 }

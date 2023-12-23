@@ -30,11 +30,11 @@ export const Product = styled('a', {
     right: '0.25rem',
     padding: '2rem',
 
-    borderRadius: 6,
-
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+
+    borderRadius: 6,
 
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
 
@@ -42,15 +42,29 @@ export const Product = styled('a', {
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
 
-    strong: {
-      fontSize: '$lg'
+    div: {
+      display: 'flex',
+      flexDirection: 'column',
+      lineHeight: 1.4,
+
+      strong: {
+        fontSize: '$lg',
+        color: '$gray100',
+      },
+
+      span: {
+        fontSize: '$xl',
+        fontWeight: 'bold',
+        color: '$green300'
+      },
     },
 
-    span: {
-      fontSize: '$xl',
-      fontWeight: 'bold',
-      color: '$green300'
-    },
+    img: {
+      padding: '12px',
+      background: '$green500',
+      borderRadius: '6px',
+      border: 'none',
+    }
   },
 
   '&:hover': {
