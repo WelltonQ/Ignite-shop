@@ -3,22 +3,31 @@ import { styled } from "..";
 export const ContainerDrawer = styled('div', {
   background: '$gray800',
   width: '480px',
-  height: '100vh',
+  height: '100%',
   position: 'absolute',
   right: 0,
   top: 0,
-  padding: '24px',
 })
 
 export const HeaderDrawer = styled('header', {
   display: 'flex',
   justifyContent: 'flex-end',
+  paddingTop: '24px',
+  paddingRight: '24px',
+
+  button: {
+    background: 'none',
+    border: 'none',
+    cursor: 'pointer',
+  }
 })
 
 export const Content = styled('div', {
   padding: '24px',
-  height: '100%',
-  
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '32px',
+
   strong: {
     fontSize: '20px'
   }
@@ -28,8 +37,6 @@ export const Card = styled('div', {
   display: 'flex',
   gap: 10,
   fontSize: '18px',
-  marginTop: '32px',
-
 })
 
 export const ImageContainer = styled('div', {
@@ -74,11 +81,39 @@ export const DetailsBag = styled('div', {
 export const FooterDrawer = styled('footer', {
   display: 'flex',
   flexDirection: 'column',
-  justifyContent: 'flex-end',
-  marginTop: 'auto',
-
+  position: 'absolute',
+  bottom: 0,
+  padding: '48px',
+  width: '100%',
+  gap: '7px',
+  
   div: {
     display: 'flex',
     justifyContent: 'space-between',
+
+    strong: {
+      fontSize: '18px',
+
+      '&:nth-of-type(2)': {
+        fontSize: '24px',
+      }
+    }
+  },
+
+  button: {
+    background: '$green500',
+    color: '$white',
+    padding: '20px',
+    fontSize: '18px',
+    fontWeight: 'bold',
+    borderRadius: '8px',
+    border: 'none',
+    cursor: 'pointer',
+    transition: 'all 0.5s',
+    marginTop: '57px',
+
+    '&:hover': {
+      background: '$green300',
+    }
   }
 })

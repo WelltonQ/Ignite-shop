@@ -8,35 +8,37 @@ export function Drawer() {
   return (
     <ContainerDrawer>
       <HeaderDrawer>
-        <Image src={imgX} width={24} height={24} alt='' />
+        <button>
+          <Image src={imgX} width={24} height={24} alt='' />
+        </button>
       </HeaderDrawer>
       <Content>
-        <strong>Sacola de compras</strong>
+          <strong>Sacola de compras</strong>
 
-        <Card>
-          <ImageContainer>
-            <Image src={imgX} width={94} height={94} alt='' />
-          </ImageContainer>
-          <DetailsBag>
-            <span>Camiseta Beyond the Limits</span>
-            <strong>R$ 79,90</strong>
-            <button>Remover</button>
-          </DetailsBag>
-        </Card>
+            <Card>
+              <ImageContainer>
+                <Image src={imgX} width={94} height={94} alt='' />
+              </ImageContainer>
+              <DetailsBag>
+                <span>Camiseta Beyond the Limits</span>
+                <strong>R$ 79,90</strong>
+                <button>Remover</button>
+              </DetailsBag>
+            </Card>
 
-        <FooterDrawer>
-            <div>
-              <span>Quantidade</span>
-              <span>3 itens</span>
-            </div>
-            <div>
-              <strong>Valor total</strong>
-              <strong>R$ 270.00</strong>
-            </div>
-
-            <button>Finalizar compra</button>
-        </FooterDrawer>
       </Content>
+      <FooterDrawer>
+          <div>
+            <span>Quantidade</span> 
+            <span>3 itens</span>
+          </div>
+          <div>
+            <strong>Valor total</strong>
+            <strong>R$ 270.00</strong>
+          </div>
+
+          <button>Finalizar compra</button>
+      </FooterDrawer>
     </ContainerDrawer>
   )
 }

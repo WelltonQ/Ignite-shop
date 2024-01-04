@@ -31,7 +31,7 @@ function App({ Component, pageProps }: AppProps) {
         currency="USD"
       >
         <Component {...pageProps} />
-        <Drawer />
+        {/* <Drawer /> */}
       </CartProvider>
     </Container>
   )
